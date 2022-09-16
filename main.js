@@ -33,11 +33,10 @@ easySteps.forEach(easyStep => {
         trigger: easyStep,
         scrub: 1,
         start: "top center",
-        end: "top center-=200",
+        end: "top center-=300",
     },
 })
 })
-
 
 // For expanding BgImage
 
@@ -63,7 +62,6 @@ tl.to(cards, {
     duration: duration,
     ease: "none",
 });
-
 
 // For fake horizontal scrolling
 
