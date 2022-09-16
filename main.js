@@ -195,7 +195,7 @@ $('.platform-video-wrapper').each(function(i, gruveCard) {
 });
 
 
-// For video hover
+// For video play on hover and hide thumbnail
 
 
 
