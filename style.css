@@ -877,7 +877,7 @@ input::-webkit-input-placeholder {
 .accordion-item-body {
     max-height: 0;
     overflow: hidden;
-    transition: max-height .3s ease-out;
+    transition: max-height .4s ease-out;
     border-bottom: .1rem solid;
     margin-top: 2rem;
 }
