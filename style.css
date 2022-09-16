@@ -1077,6 +1077,17 @@ input::-webkit-input-placeholder {
     .hero-cta-btn {
         padding: 0 1.8rem;
     }
+    .whyGruve-img-container {
+        margin: .2rem 0 0 .4rem;
+    }
+    .whyGruve-card-img {
+        width: 4rem;
+        height: 4rem;
+    }
+    .whyGruve-card-h {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
     .platform-container-text {
         width: 80rem;
     }
@@ -1111,13 +1122,13 @@ input::-webkit-input-placeholder {
         gap: 2.4rem;
     }
     .event-analytics {
-        left: 118rem;
+        left: 120rem;
     }
     .sales-reach {
-        left: 258rem;
+        left: 252rem;
     }
     .verification-and-management {
-        left: 398rem;
+        left: 381rem;
     }
     .faq-header {
         padding-right: 4rem;
@@ -1263,10 +1274,11 @@ input::-webkit-input-placeholder {
         width: 23.8rem;
         height: 22.3rem;
         margin-bottom: 5.7rem;
+        padding: 0;
     }
     .picture-container {
-        width: 20.6rem;
-        height: 19.1rem;
+        width: 23.8rem;
+        height: 22.1rem;
         padding-bottom: 2rem;
     }
     .connect-wallet-header, .connect-wallet-text {
@@ -1348,7 +1360,7 @@ input::-webkit-input-placeholder {
         width: 27rem;
         height: 38rem;
     }
-     .event-managers-img, .event-analytics-img, .sales-reach-img, .verification-and-management-img {
+     .event-managers-img, .event-analytics-img, .sales-reach-img, .verification-and-management-img, .event-managers-video {
         width: 23.8rem;
         height: 22rem;
     }
