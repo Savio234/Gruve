@@ -1077,7 +1077,7 @@ input::-webkit-input-placeholder {
     .hero-cta-btn {
         padding: 0 1.8rem;
     }
-    .whyGruve-img-container {
+    .whyGruve-img-container img {
         margin: .2rem 0 0 .4rem;
     }
     .whyGruve-card-img {
@@ -1191,6 +1191,9 @@ input::-webkit-input-placeholder {
     }
     .inner-nav-list {
         margin: 3rem 0;
+    }
+    .event-creator {
+        padding: 0 2.4rem;
     }
     .hero-container {
         align-items: center;
@@ -1394,7 +1397,7 @@ input::-webkit-input-placeholder {
         height: auto;
     }
     .waitlist-input, .waitlist-cta-btn {
-        height: 5rem;
+        height: 4.5rem;
     }
     .waitlist-input {
         padding: 0 0 0 1.6rem;
