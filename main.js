@@ -203,7 +203,7 @@ $('.platform-video-wrapper').each(function(i, gruveCard) {
 
 
 AOS.init({
-    duration: 1800,
+    duration: 2100,
 })
 
 
