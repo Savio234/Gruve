@@ -38,11 +38,16 @@ easySteps.forEach(easyStep => {
 })
 })
 
+
+
 // For expanding BgImage
 
 
 
-var duration = 10,
+ScrollTrigger.matchMedia({
+
+  "(min-width: 760px)": function() {
+    var duration = 10,
     cards = gsap.utils.toArray(".stepsCard"),
     cardIncrement = duration / (cards.length - 1)
         tl = gsap.timeline({
@@ -52,74 +57,23 @@ var duration = 10,
                 scrub: 1,
                 snap: 1 / (cards.length - 1),
                 start: "top top",
-                end: "+=6000"
+                end: "+=7000"
             }
         });
     
 
-tl.to(cards, {
-    xPercent: -100 * (cards.length - 1),
-    duration: duration,
-    ease: "none",
-});
+    tl.to(cards, {
+        xPercent: -100 * (cards.length - 1),
+        duration: duration,
+        ease: "none",
+    });
+  },
+
+})
+
+
 
 // For fake horizontal scrolling
-
-
-
-function coordinate() {
-
-    const elem = document.getElementById("connectWallet");
-    const rect = elem.getBoundingClientRect();
-    const bodyRect = document.body.getBoundingClientRect();
-    const offsetOne = bodyRect.right - rect.right;
-    console.log(`Offset value is ${offsetOne}`)
-  
-    for (const key in rect) {
-      if (typeof rect[key] !== 'function') {
-        console.log(`${key} : ${rect[key]}`);
-      }
-    }
-  }
-  document.addEventListener('scroll', coordinate);
-  coordinate();
-  
-function secondCoordinate() {
-
-    const elem = document.getElementById("createTicket");
-    const rectTwo = elem.getBoundingClientRect();
-    const bodyRECT = document.body.getBoundingClientRect();
-    const offsetTwo = bodyRECT.right - rectTwo.right;
-    console.log(`Offset value is ${offsetTwo}`)
-  
-    for (const key in rectTwo) {
-      if (typeof rectTwo[key] !== 'function') {
-        console.log(`${key} : ${rectTwo[key]}`);
-      }
-    }
-}
-  document.addEventListener('scroll', secondCoordinate);
-  secondCoordinate();
-
-  function thirdCoordinate() {
-
-    const elem = document.getElementById("listTicket");
-    const rectThree = elem.getBoundingClientRect();
-    const bodyrect = document.body.getBoundingClientRect();
-    const offset = bodyrect.right - rectThree.right;
-    console.log(`Offset value is ${offset}`)
-  
-    for (const key in rectThree) {
-      if (typeof rectThree[key] !== 'function') {
-        console.log(`${key} : ${rectThree[key]}`);
-      }
-    }
-}
-  document.addEventListener('scroll', thirdCoordinate);
-  thirdCoordinate();
-
-  // Position of cards and offset value
-
 
 
 
@@ -195,14 +149,44 @@ $('.platform-video-wrapper').each(function(i, gruveCard) {
 });
 
 
-// For video play on hover and hide thumbnail
-
+// For video hover
 
 
 
 AOS.init({
-    duration: 2100,
+    duration: 1800,
 })
 
 
 // For animate on scroll
+
+
+
+function splitScroll() {
+
+  const controller = new ScrollMagic.Controller();
+
+  new ScrollMagic.Scene({
+    duration: 800,
+    triggerElement: ".creators-img-container",
+    triggerHook: 0.5
+  })
+  .setPin(".creators-img-container")
+  .addIndicators()
+  .addTo(controller);
+
+}
+
+
+// For split scrolling
+
+
+
+gsap.utils.toArray(".overlapping-card").forEach((panel, i) => {
+  ScrollTrigger.create({
+    trigger: panel,
+    start: "top top", 
+    pin: true, 
+    pinSpacing: false 
+  });
+});
