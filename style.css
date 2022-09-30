@@ -1314,6 +1314,9 @@ input::-webkit-input-placeholder {
     .active-list-item {
         margin-top: 5.6rem;
     }
+    .event-creators-padding {
+        margin-left: 5rem;
+    }
     .event-attendees {
         margin-left: 2rem;
     }
@@ -1346,7 +1349,7 @@ input::-webkit-input-placeholder {
         width: 40rem;
     }
     .hero-cta-btn {
-        padding: 2.4rem 15rem;
+        padding: 1.7rem 15rem;
         margin-top: 7.2rem;
     }
     .nav-cta-btn {
