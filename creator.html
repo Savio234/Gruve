@@ -98,7 +98,7 @@
                             </li>
                         </ul>
 
-                        <div id="#join-waitlist" class="hero-cta-btn">
+                        <div id="#join-waitlist" class="hero-cta-btn nav-cta-btn">
                             <div class="hero-btn-text">
                                 <p class="margin-0 hero-btn-p">
                                     Join Waitlist
@@ -125,12 +125,12 @@
 
                     <div class="flex flex-between hero-intro-content">
 
-                        <div class="hero-intro-container">
+                        <div class="hero-intro-container hidden">
 
                             <div class="hero-header flex">
                                 <h3 class="margin-0 flex flex-center hero-h">
                                     <span class="hero-h-color flex center"><p class="margin-0">Gruve</p></span> 
-                                    soon to launch! 
+                                    <span class="light-text">soon to launch!</span> 
                                     <span class="hero-h-img"><img src="img/rocket-icon.svg" alt="" class="hero-img"></span>
                                 </h3>
                             </div>
@@ -149,7 +149,7 @@
                                 </div>
                             </div>
 
-                            <div class="hero-btn-container flex">
+                            <div class="hero-btn-container flex flex-center">
 
                                 <form action="" method="get" class="flex hero-form">
                                     <input type="email" name="email" id="email" class="hero-input" placeholder="Enter Email address">
@@ -168,7 +168,7 @@
                         </div>
                         
 
-                        <div class="hero-video-container">
+                        <div class="hero-video-container hidden">
                             <!-- <video src="" autoplay loop muted class="hero-video"></video> -->
                         </div>
 
@@ -205,7 +205,7 @@
 
                     <div class="whyGruve-cards-container flex">
 
-                        <div class="whyGruve-card">
+                        <div class="whyGruve-card  whyGruve-card-1 hiddenCards">
                             <div class="whyGruve-card-img easiest-event">
                                 <div class="whyGruve-img-container">
                                     <img src="img/analytics.svg" alt="" class="whyGruve-img">
@@ -225,7 +225,7 @@
                             </div>
                         </div>
 
-                        <div class="whyGruve-card">
+                        <div class="whyGruve-card whyGruve-card-2 hiddenCards">
                             <div class="whyGruve-card-img events-kinds">
                                 <div class="whyGruve-img-container">
                                     <img src="img/simplified.svg" alt="" class="whyGruve-img">
@@ -245,7 +245,7 @@
                             </div>
                         </div>
 
-                        <div class="whyGruve-card">
+                        <div class="whyGruve-card whyGruve-card-3 hiddenCards">
                             <div class="whyGruve-card-img event-managing">
                                 <div class="whyGruve-img-container">
                                     <img src="img/promotion.svg" alt="" class="whyGruve-img">
@@ -265,7 +265,7 @@
                             </div>
                         </div>
 
-                        <div class="whyGruve-card">
+                        <div class="whyGruve-card whyGruve-card-4 hiddenCards">
                             <div class="whyGruve-card-img event-managing">
                                 <div class="whyGruve-img-container">
                                     <img src="img/flexibility.svg" alt="" class="whyGruve-img">
@@ -393,7 +393,7 @@
 
                             <div class="connect-wallet-img">
                                 <div class="picture-container relative">
-                                    <!-- <img src="img/connect-wallet-img.svg" alt="" class="connect-wallet-picture"> -->
+                                    <img src="img/connect-wallet-img.svg" alt="" class="connect-wallet-picture">
                                     <video src="videos/Connect-your-wallet.webm" autoplay loop muted class="event-managers-video"></video>
                                 </div>
                             </div>
@@ -429,9 +429,9 @@
                             </div>
 
                             <div class="connect-wallet-img create-ticket-img">
-                                <div class="picture-container relative">
-                                    <!-- <img src="img/create-ticket-img.svg" alt="" class="connect-wallet-picture"> -->
-                                    <video src="videos/Create-ticket-step.webm" autoplay loop muted class="event-managers-video"></video>
+                                <div class="create-ticket-picture-container relative">
+                                    <img src="img/create-ticket-img.svg" alt="" class="connect-wallet-picture">
+                                    <video src="videos/Create-ticket-step.webm" autoplay loop muted class="create-ticket-video"></video>
                                 </div>
                             </div>
 
@@ -467,7 +467,7 @@
 
                             <div class="connect-wallet-img list-ticket-img">
                                 <div class="picture-container relative">
-                                    <!-- <img src="img/list-ticket-img.svg" alt="" class="connect-wallet-picture"> -->
+                                    <img src="img/list-ticket-img.svg" alt="" class="connect-wallet-picture">
                                     <video src="videos/list-on-marketplace.webm" autoplay loop muted class="event-managers-video"></video>
                                 </div>
                             </div>
@@ -506,7 +506,10 @@
                             <div class="creators-svg-container relative">
                                 <svg class="creators-svg-path" width="16" height="158" viewBox="0 0 16 158" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C5.79086 0 4 1.79086 4 4V143.07C1.60879 144.453 0 147.039 0 150C0 154.418 3.58172 158 8 158C12.4183 158 16 154.418 16 150C16 147.039 14.3912 144.453 12 143.07V4C12 1.79086 10.2091 0 8 0Z" fill="#ED2144"/>
-                                </svg>  
+                                </svg>
+                                <div class="red-fill relative">
+                                    <!-- <div class="red-bulb"></div> -->
+                                </div>  
                             </div>
 
                             <div class="creators-benefits-list">
@@ -1367,72 +1370,81 @@
 
         <footer id="footer">
 
-                <div class="footer-container flex flex-center flex-between">
-
-                    <div class="footer-logo-section">
-                        <div class="footer-logo">
-                            <img src="img/footer-logo.svg" alt="" class="footer-icon">
-                        </div>
-
-                        <div id="copyright-lg" class="copyright-container">
-                            <h3 class="margin-0 copyright-h">
-                                Copyright @ 2022 all rights reserved
-                            </h3>
-                        </div>
-
-                        <div id="copyright-sm" class="copyright-container">
-                            <h3 class="margin-0 copyright-h">
-                                Copyright @ 2022 <span class="footer-gruve-color">GRUVE</span> all rights reserved
-                            </h3>
-                        </div>
+            <div id="copyright-sm" class="footer-container flex flex-center flex-between">
+                <div class="footer-logo-section">
+                    <div class="footer-logo">
+                        <img src="img/footer-logo.svg" loading="lazy" alt="" class="footer-icon">
                     </div>
 
-
-                    <div class="social-media-container flex">
-                        <div class="help-section">
-                            <div class="footer-community-header">
-                                <h3 class="margin-0 footer-community-h">
-                                    Help
-                                </h3>
-                            </div>
-
-                            <a href="#faq" class="footer-nav-link">
-                                <div class="faq-footer-nav">
-                                    <p class="margin-0 hero-small-p footer-p">
-                                        FAQs
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="company-section">
-                            <div class="footer-community-header">
-                                <h3 class="margin-0 footer-community-h">
-                                    Company
-                                </h3>
-                            </div>
-
-                            <a href="" class="footer-nav-link">
-                                <div class="faq-footer-nav">
-                                    <p class="margin-0 hero-small-p footer-p">
-                                        Our Blog
-                                    </p>
-                                </div>
-                            </a>
-
-                            <a href="#motive" class="footer-nav-link">
-                                <div class="faq-footer-nav">
-                                    <p class="margin-0 hero-small-p footer-p">
-                                        About Gruve
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
+                    <div class="copyright-container">
+                        <h3 class="margin-0 copyright-h">
+                            Copyright @ 2022 <span class="footer-gruve-color">GRUVE</span> all rights reserved
+                        </h3>
                     </div>
-
                 </div>
+            </div>
 
-        </footer>
+            <div id="copyright-lg" class="footer-dark">
+                <div class="footer-dark-content">
+                    <div class="footer-dark-logo">
+                        <img src="img/footer-logo-dark.svg" alt="" class="dark-footer-logo">
+                    </div>
+
+                    <div class="dark-footer-nav flex flex-between">
+                        <a href="" class="dark-footer-link">
+                            <div class="dark-footer-text">
+                                <h3 class="margin-0 copyright-h dark-footer-h">
+                                    Our Blog
+                                </h3>
+                            </div>
+                        </a>
+
+                        <a href="#faq" class="dark-footer-link">
+                            <div class="dark-footer-text">
+                                <h3 class="margin-0 copyright-h dark-footer-h">
+                                    FAQs
+                                </h3>
+                            </div>
+                        </a>
+
+                        <a href="" class="dark-footer-link">
+                            <div class="dark-footer-text">
+                                <h3 class="margin-0 copyright-h dark-footer-h">
+                                    Our Blog
+                                </h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="dark-footer-icons flex flex-between">
+                        <div class="dark-footer-icon fb-dark">
+                            <img src="img/fb-dark.svg" alt="" class="dark-icon">
+                        </div>
+
+                        <div class="dark-footer-icon ig-dark">
+                            <img src="img/ig-dark.svg" alt="" class="dark-icon">
+                        </div>
+
+                        <div class="dark-footer-icon twitter-dark">
+                            <img src="img/twitter-icon.svg" alt="" class="dark-icon">
+                        </div>
+
+                        <div class="dark-footer-icon discord-dark">
+                            <img src="img/discord-dark.svg" alt="" class="dark-icon">
+                        </div>
+
+                        <div class="dark-footer-icon linkedin-dark">
+                            <img src="img/linkedin-dark.svg" alt="" class="dark-icon">
+                        </div>
+
+                        <div class="dark-footer-icon tiktok-dark">
+                            <img src="img/tiktok-dark.svg" alt="" class="dark-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </footer>
 
 
 
@@ -1441,13 +1453,10 @@
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/MotionPathPlugin.min.js"></script>
 
     <script src="main.js">
         

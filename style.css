@@ -11,6 +11,7 @@ body {
     padding: 0;
     background: #fff;
     height: auto;
+    overflow-x: hidden;
 }
 body::-webkit-scrollbar {
     display: none;
@@ -21,7 +22,7 @@ body::-webkit-scrollbar {
 }
 @font-face {
     font-family: GilroyB;
-    src: url('fonts/gilroy/Gilroy-ExtraBold.otf');
+    src: url('fonts/gilroy/Gilroy-Bold.ttf');
 }
 @font-face {
     font-family: Matter;
@@ -192,12 +193,19 @@ ul {
 .hero-container {
     margin: 2.9rem 0 20rem 11.2rem;
 }
+.hero-attendees-container {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 2.9rem auto 20rem;
+}
 .hero-intro-container {
     width: 61rem;
     align-items: center;
     align-content: center;
     justify-content: center;
     margin: auto 0;
+    transform: translateX(-100%);
 }
 .attendees-hero-header {
     align-items: center;
@@ -205,6 +213,10 @@ ul {
     justify-content: center;
     margin: 0 auto;
     width: 36rem;
+}
+.light-text {
+    font-family: Gilroy;
+    font-weight: 300;
 }
 .attendees-hero-text {
     align-items: center;
@@ -219,6 +231,7 @@ ul {
     background-image: url("img/hero-video.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    transform: translateX(100%);
 }
 .hero-h {
     font-family: GilroyB;
@@ -249,8 +262,18 @@ ul {
     width: 3.2rem;
     height: 3.2rem;
 }
+.hidden {
+    opacity: 0;
+    transition: all 1500ms ease-in-out;
+    filter: blur(.5rem);
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
 .attendees-hero-text {
-    margin: 2.2rem auto 4.2rem;
+    margin: 2.2rem 6rem 4.2rem 0;
 }
 .attendees-hero-p-wrapper {
     width: 85rem;
@@ -266,6 +289,7 @@ ul {
 }
 .hero-small-text {
     width: 53.2rem;
+    margin-bottom: 2.4rem;
 }
 .hero-small-p {
     font-family: Aventa;
@@ -302,7 +326,6 @@ ul {
 }
 .attendees-hero-input {
     width: 62.8rem;
-    border-radius: 10rem;
 }
 input::-webkit-input-placeholder {
     font-family: Aventa;
@@ -329,7 +352,7 @@ input::-webkit-input-placeholder {
 }
 .hero-btn-p {
     font-family: Aventa;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 1.6rem;
     line-height: 2.4rem;
     color: #fbfbfd;
@@ -386,6 +409,26 @@ input::-webkit-input-placeholder {
     border-radius: 2.4rem;
     background: #fbfbfd;
     padding: 2.4rem;
+    transform: translateY(100%);
+    transition: all 1.5s ease;
+}
+.hiddenCards {
+    opacity: 0;
+    filter: blur(.5rem);
+}
+.whyGruve-card:nth-child(2) {
+    transition-delay: 400ms;
+}
+.whyGruve-card:nth-child(3) {
+    transition-delay: 800ms;
+}
+.whyGruve-card:nth-child(4) {
+    transition-delay: 1200ms;
+}
+.showcard {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
 }
 .whyGruve-attendees-card {
     width: 38.9rem;
@@ -440,7 +483,7 @@ input::-webkit-input-placeholder {
 
 
 .overlapping-content-container {
-    margin: 0 9.6rem 10rem;
+    margin: 0 9.6rem 30rem;
 }
 .overlapping-content-header {
     width: 65rem;
@@ -557,14 +600,10 @@ input::-webkit-input-placeholder {
 
 
 .create-and-sell-container {
-    margin: 0 0 14.6rem 6.2rem;
-}
-#create-and-sell2 {
-    display: none;
+    margin: 0 0 14.6rem 2rem;
 }
 .cards-container {
-    gap: 2.4rem;
-    overflow-x: scroll;
+    overflow-x: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -592,14 +631,6 @@ input::-webkit-input-placeholder {
     stroke-dashoffset: 50;
     animation: lineAnimate 5s infinite;
 }
-@keyframes lineAnimate {
-    from {
-        fill: transparent;
-    }
-    to {
-        fill: #2035ec;
-    }
-}
 .create-ticket-line {
     position: absolute;
     top: 6rem;
@@ -615,7 +646,6 @@ input::-webkit-input-placeholder {
     position: absolute;
     top: 0;
     left: 143rem;
-    z-index: 100;
 }
 .create-ticket {
     background: #c81030;
@@ -702,14 +732,23 @@ input::-webkit-input-placeholder {
 }
 .connect-wallet-img {
     width: 59.8rem;
-    height: 57.3rem;
+    height: 37.3rem;
     background: #fbfbfd;
     border-radius: .8rem;
-    padding: 3.2rem 1.6rem 1.6rem;
+    padding: 2.4rem 1.6rem;
 }
 .picture-container, .event-managers-video {
     width: 56.6rem;
-    height: 52.5rem;
+    height: 32.5rem;
+}
+.create-ticket-img {
+    padding: 3.2rem 0;
+    width: 30rem;
+    height: 50rem;
+}
+.create-ticket-video, .create-ticket-picture-container {
+    width: 30rem;
+    height: 45rem;
 }
 
 
@@ -749,7 +788,33 @@ input::-webkit-input-placeholder {
     background: #e1e1e8;
     margin-right: 4rem;
 }
+.red-fill {
+    width: 1.2rem;
+    height: 15.8rem;
+    border-radius: 2rem;
+    background: #c81030;
+    animation: fill 7000ms infinite;
+}
+.red-bulb {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-top: 0;
+    background: #c81030;
+    border-radius: 50%;
+    position: absolute;
+    top: 15.3rem;
+    left: -0.5rem;
+}
+@keyframes fill {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
+}
 .creators-svg-container svg {
+    display: none;
     position: absolute;
     top: 0;
     left: -0.5rem;
@@ -838,9 +903,6 @@ input::-webkit-input-placeholder {
     padding: 1.6rem;
     transition: all 400ms ease-in-out;
 }
-.platform-card:hover {
-    box-shadow: 0 1rem 1rem 1.5rem rgba(100, 98, 98, 0.3);
-}
 .platform-card-img, .platform-card-video, .platform-video-wrapper {
     width: 34.2rem;
     height: 23.4rem;
@@ -876,7 +938,7 @@ input::-webkit-input-placeholder {
 
 
 .faq-container {
-    padding: 15rem 10rem 0;
+    padding: 15rem 10rem 8rem;
     background: #fbfbfd;
 }
 .faq-content, .accordion {
@@ -913,7 +975,7 @@ input::-webkit-input-placeholder {
     color: #111021;
 }
 .accordion-body-p {
-    font-family: Matter;
+    font-family: Aventa;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 2.4rem;
@@ -1019,10 +1081,6 @@ input::-webkit-input-placeholder {
     padding: 2.8rem 1.9rem 0;
     transition: all 400ms ease;
 }
-.community-card:hover {
-    scale: 1.1;
-    box-shadow: .5rem 1rem 1rem 1rem rgba(100, 98, 98, 0.3);
-}
 .community-card-icon {
     width: 5.6rem;
     height: 5.6rem;
@@ -1123,6 +1181,37 @@ input::-webkit-input-placeholder {
     letter-spacing: 0.005em;
     color: #06060b;
 }
+.footer-dark {
+    background: #06060b;
+}
+.footer-dark-content {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10rem 0;
+}
+.footer-dark-logo {
+    margin: 0 auto;
+    width: 9.5rem;
+    height: 4rem;
+}
+.dark-footer-h {
+    color: #fbfbfd;
+    letter-spacing: 0.005em;
+}
+.dark-footer-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+.dark-footer-nav {
+    width: 28.7rem;
+    margin: 4rem auto;
+}
+.dark-footer-icons {
+    width: 31.2rem;
+    margin: 0 auto;
+}
 
 
 
@@ -1179,7 +1268,7 @@ input::-webkit-input-placeholder {
         gap: 2rem;
     }
     .overlapping-content-container {
-        margin: 0 5rem 8rem;
+        margin: 0 5rem 15rem;
     }
     .overlapping-card {
         width: 90rem;
@@ -1242,7 +1331,7 @@ input::-webkit-input-placeholder {
         gap: 2.4rem;
     }
     .faq-container {
-        padding: 5rem 7rem 0;
+        padding: 5rem 7rem;
     }
     .faq-header {
         padding-right: 4rem;
@@ -1325,6 +1414,7 @@ input::-webkit-input-placeholder {
         align-content: center;
         justify-content: center;
         margin: 2.9rem 0 5rem;
+        overflow-x: hidden;
     }
     .hero-intro-container {
         width: auto;
@@ -1348,7 +1438,7 @@ input::-webkit-input-placeholder {
     .hero-cta-btn, .hero-input {
         width: 40rem;
     }
-    .hero-cta-btn {
+    .nav-cta-btn {
         padding: 1.7rem 15rem;
         margin-top: 7.2rem;
     }
@@ -1384,6 +1474,7 @@ input::-webkit-input-placeholder {
         align-content: center;
         justify-content: center;
         margin: 0 1.6rem 6rem;
+        overflow-x: hidden;
     }
     .whyGruve-header, .whyGruve-small-text {
         width: auto;
@@ -1392,6 +1483,16 @@ input::-webkit-input-placeholder {
         width: 43rem;
         height: 21.2rem;
         padding: 2.4rem 2.4rem 4rem;
+        transform: none;
+    }
+    .whyGruve-card-1, .whyGruve-card-3 {
+        transform: translateX(50%);
+    }
+    .whyGruve-card-2, .whyGruve-card-4 {
+        transform: translateX(-50%);
+    }
+    .showcard {
+        transform: translateX(0);
     }
     .whyGruve-attendees-header, .whyGruve-attendees-small-text {
         width: 45rem;
@@ -1401,7 +1502,7 @@ input::-webkit-input-placeholder {
         padding: 0 10rem;
     }
     .overlapping-content-container {
-        margin: 0 1rem 8rem;
+        margin: 0 1rem 15rem;
     }
     .overlapping-card {
         width: 60rem;
@@ -1549,6 +1650,14 @@ input::-webkit-input-placeholder {
         font-size: 1.4rem;
         line-height: 2rem;
     }
+    .create-ticket-video, .create-ticket-picture-container {
+        width: 20rem;
+        height: 25rem;
+    }
+    .create-ticket-img {
+        width: 20.5rem;
+        height: 27rem;
+    }
     .number-one-container {
         width: 5.6rem;
         height: 5.6rem;
@@ -1617,6 +1726,7 @@ input::-webkit-input-placeholder {
     .faq-content {
         flex-direction: column;
         margin-bottom: 8rem;
+        padding-bottom: 5rem;
     }
     .faq-container {
         padding: 3rem 0 0;
@@ -1636,7 +1746,7 @@ input::-webkit-input-placeholder {
         justify-content: center;
     }
     .join-waitlist-container {
-        padding: 3rem 0;
+        padding: 8rem 0 3rem;
         height: auto;
     }
     .join-waitlist-header {
@@ -1839,5 +1949,9 @@ input::-webkit-input-placeholder {
     }
     .creators-svg-container svg {
         left: -0.8rem;
+    }
+    .join-waitlist-container {
+        padding: 3rem 0;
+        height: auto;
     }
 }

@@ -16,6 +16,55 @@ function closeNav() {
 // For nav dropdown
 
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  })
+})
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el))
+
+// window.addEventListener("scroll", fadeAnimation)
+// function fadeAnimation () {
+//   const fadeTrigger = window.innerHeight / 6 * 4;
+
+//   hiddenElements.forEach(hiddenElement => {
+//     const top = hiddenElement.getBoundingClientRect().top
+
+//     if (fadeTrigger > top) {
+//       hiddenElement.classList.add("show")
+//     } else {
+//       hiddenElement.classList.remove("show")
+//     }
+//   })
+// }
+
+
+// For fade in hero-section
+
+
+
+
+const observerNode = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("showcard");
+    } else {
+      entry.target.classList.remove("showcard");
+    }
+  })
+})
+
+const hide = document.querySelectorAll(".hiddenCards");
+hide.forEach((ed) => observerNode.observe(ed))
+
+
+
 
 const easySteps = document.querySelectorAll(".clipped-bg");
 
