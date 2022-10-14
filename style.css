@@ -1200,9 +1200,18 @@ input::-webkit-input-placeholder {
     color: #fbfbfd;
     letter-spacing: 0.005em;
 }
-.dark-footer-icon {
+.dark-footer-icon, .dark-circle {
     width: 3.2rem;
     height: 3.2rem;
+}
+.dark-circle {
+    border-radius: 50%;
+    background: #202020;
+}
+.tiktok-dark-container {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin: .7rem 0 0 .7rem;
 }
 .dark-footer-nav {
     width: 28.7rem;
