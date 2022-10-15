@@ -264,7 +264,7 @@ ul {
 }
 .hidden {
     opacity: 0;
-    transition: all 1500ms ease-in-out;
+    transition: all 1000ms ease-in-out;
     filter: blur(.5rem);
 }
 .show {
@@ -410,20 +410,20 @@ input::-webkit-input-placeholder {
     background: #fbfbfd;
     padding: 2.4rem;
     transform: translateY(100%);
-    transition: all 1.5s ease;
+    transition: all 1s ease;
 }
 .hiddenCards {
     opacity: 0;
     filter: blur(.5rem);
 }
 .whyGruve-card:nth-child(2) {
-    transition-delay: 400ms;
+    transition-delay: 200ms;
 }
 .whyGruve-card:nth-child(3) {
-    transition-delay: 800ms;
+    transition-delay: 400ms;
 }
 .whyGruve-card:nth-child(4) {
-    transition-delay: 1200ms;
+    transition-delay: 600ms;
 }
 .showcard {
     opacity: 1;
@@ -495,6 +495,9 @@ input::-webkit-input-placeholder {
     border-radius: 1.6rem;
     background: #06060b;
     margin-bottom: 5rem!important;
+}
+.overlapping-p {
+    color: #fff;
 }
 .trending-events {
     background: url("img/trending-events.png");
@@ -612,9 +615,8 @@ input::-webkit-input-placeholder {
 }
 .create-and-sell-card {
     width: 140rem;
-    height: 75rem;
+    height: 100vh;
     border-radius: 2.4rem;
-    margin-top: .5rem;
 }
 .three-easy-steps {
     background-image: url("img/3easy.png");
@@ -666,11 +668,11 @@ input::-webkit-input-placeholder {
 }
 .three-easy-steps-img {
     width: 31rem;
-    height: 20rem;
+    height: 15rem;
 }
 .three-easy-steps-header {
     width: 84rem;
-    margin: 2.4rem 0 5.6rem;
+    margin: 2.4rem 0 2.6rem;
     padding-left: 8rem;
 }
 .three-easy-steps-h {
@@ -768,18 +770,10 @@ input::-webkit-input-placeholder {
 }
 .creators-list-container {
     width: 56rem;
-    overflow-y: scroll;
     
 }
-.creators-list-container::-webkit-scrollbar {
-    display: none;
-}
-.creators-list-container {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}
 .creators-benefits-container {
-    height: 100vh;
+    height: 150vh;
 }
 .creators-svg-container {
     width: .8rem;
