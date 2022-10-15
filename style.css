@@ -410,7 +410,7 @@ input::-webkit-input-placeholder {
     background: #fbfbfd;
     padding: 2.4rem;
     transform: translateY(100%);
-    transition: all 1s ease;
+    transition: all 1000ms ease;
 }
 .hiddenCards {
     opacity: 0;
@@ -496,9 +496,6 @@ input::-webkit-input-placeholder {
     background: #06060b;
     margin-bottom: 5rem!important;
 }
-.overlapping-p {
-    color: #fff;
-}
 .trending-events {
     background: url("img/trending-events.png");
     background-repeat: no-repeat;
@@ -533,6 +530,9 @@ input::-webkit-input-placeholder {
     line-height: 5.2rem;
     font-weight: 700;
     font-family: GilroyB;
+}
+.overlapping-p {
+    color: #fff;
 }
 .overlapping-card-text {
     width: 31rem;
@@ -770,13 +770,12 @@ input::-webkit-input-placeholder {
 }
 .creators-list-container {
     width: 56rem;
-    
 }
 .creators-benefits-container {
     height: 150vh;
 }
 .creators-svg-container {
-    width: .8rem;
+    width: 1.2rem;
     height: 104.8rem;
     border-radius: 3.2rem;
     background: #e1e1e8;
@@ -836,8 +835,7 @@ input::-webkit-input-placeholder {
 
 
 .platform-container {
-    background: #fcfcfc;
-    margin-top: 15rem;
+    margin-top: 25rem;
 }
 .platform-container-header {
     width: 81.1rem;
@@ -1801,12 +1799,6 @@ input::-webkit-input-placeholder {
     }
     #copyright-lg {
         display: none;
-    }
-    .social-media-container {
-        display: none;
-    }
-    .help-section {
-        margin-right: 5rem;
     }
     .footer-logo {
         margin-bottom: .8rem;
