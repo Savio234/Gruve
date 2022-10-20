@@ -29,22 +29,6 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el))
 
-// window.addEventListener("scroll", fadeAnimation)
-// function fadeAnimation () {
-//   const fadeTrigger = window.innerHeight / 6 * 4;
-
-//   hiddenElements.forEach(hiddenElement => {
-//     const top = hiddenElement.getBoundingClientRect().top
-
-//     if (fadeTrigger > top) {
-//       hiddenElement.classList.add("show")
-//     } else {
-//       hiddenElement.classList.remove("show")
-//     }
-//   })
-// }
-
-
 // For fade in hero-section
 
 
@@ -211,21 +195,37 @@ AOS.init({
 
 
 
-function splitScroll() {
+// function splitScroll() {
 
-  const controller = new ScrollMagic.Controller();
+//   const controller = new ScrollMagic.Controller();
 
-  new ScrollMagic.Scene({
-    duration: 800,
-    triggerElement: ".creators-img-container",
-    triggerHook: 0.5
-  })
-  .setPin(".creators-img-container")
-  .addIndicators()
-  .addTo(controller);
+//   new ScrollMagic.Scene({
+//     duration: 400,
+//     triggerElement: ".creators-img-container",
+//     triggerHook: 0
+//   })
+//   .setPin(".creators-img-container")
+//   .addTo(controller);
 
-}
+// }
+// splitScroll()
+ScrollTrigger.matchMedia({
 
+  "(min-width: 760px)": function splitScroll() {
+
+    const controller = new ScrollMagic.Controller();
+  
+    new ScrollMagic.Scene({
+      duration: '53%',
+      triggerElement: ".creators-img-container",
+      triggerHook: 0
+    })
+    .setPin(".creators-img-container")
+    .addTo(controller);
+  
+  }
+
+})
 
 // For split scrolling
 
