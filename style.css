@@ -96,7 +96,7 @@ a {
 .margin-0 {
     margin: 0;
 }
-img {
+img, video {
     height: 100%;
     width: 100%;
 }
@@ -489,37 +489,51 @@ input::-webkit-input-placeholder {
     width: 65rem;
     margin: 0 auto 8rem;
 }
+.overlapping-cards-container {
+    min-height: 100vh;
+}
 .overlapping-card {
     width: 124.8rem;
     height: 61.6rem;
     border-radius: 1.6rem;
     background: #06060b;
+    position: relative;
     margin-bottom: 5rem!important;
 }
-.trending-events {
+.overlapping-card:nth-child(1) {
     background: url("img/trending-events.png");
     background-repeat: no-repeat;
     background-size: cover;
+    top: 2rem;
+    z-index: 5;
 }
-.easy-payment {
+.overlapping-card:nth-child(2) {
     background: url("img/easy-payment.png");
     background-repeat: no-repeat;
     background-size: cover;
+    top: calc(2rem * 2);
+    z-index: 4;
 }
-.social-life {
+.overlapping-card:nth-child(3) {
     background: url("img/social-life.png");
     background-repeat: no-repeat;
     background-size: cover;
+    top: calc(2rem * 3);
+    z-index: 3;
 }
-.new-experiences {
+.overlapping-card:nth-child(4) {
     background: url("img/new-xperience.png");
     background-repeat: no-repeat;
     background-size: cover;
+    top: calc(2rem * 4);
+    z-index: 2;
 }
-.privacy {
+.overlapping-card:nth-child(5) {
     background: url("img/privacy.png");
     background-repeat: no-repeat;
     background-size: cover;
+    top: calc(2rem * 5);
+    z-index: 1;
 }
 .overlapping-card-header {
     width: 33rem;

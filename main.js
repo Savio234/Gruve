@@ -195,47 +195,26 @@ AOS.init({
 
 
 
-// function splitScroll() {
-
-//   const controller = new ScrollMagic.Controller();
-
-//   new ScrollMagic.Scene({
-//     duration: 400,
-//     triggerElement: ".creators-img-container",
-//     triggerHook: 0
-//   })
-//   .setPin(".creators-img-container")
-//   .addTo(controller);
-
-// }
-// splitScroll()
-ScrollTrigger.matchMedia({
-
-  "(min-width: 760px)": function splitScroll() {
-
-    const controller = new ScrollMagic.Controller();
-  
-    new ScrollMagic.Scene({
-      duration: '53%',
-      triggerElement: ".creators-img-container",
-      triggerHook: 0
-    })
-    .setPin(".creators-img-container")
-    .addTo(controller);
-  
+const lapCards = document.querySelectorAll(".overlapping-card")
+gsap.set(lapCards, {position: 'absolute'});
+gsap.to('.overlapping-card', {
+  yPercent: -100,
+  stagger: 0.5,
+  scrollTrigger: {
+    trigger: '.overlapping-cards-container',
+    start: 'top top',
+    end: '+=1250px',
+    pin: true,
+    scrub: true
   }
-
 })
 
-// For split scrolling
-
-
-
-gsap.utils.toArray(".overlapping-card").forEach((panel, i) => {
-  ScrollTrigger.create({
-    trigger: panel,
-    start: "top top", 
-    pin: true, 
-    pinSpacing: false 
-  });
-});
+// gsap.utils.toArray(".overlapping-card").forEach((panel, i) => {
+  
+//   ScrollTrigger.create({
+//     trigger: panel,
+//     start: "top top", 
+//     pin: true, 
+//     pinSpacing: false 
+//   });
+// });
